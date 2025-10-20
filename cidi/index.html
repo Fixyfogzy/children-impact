@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children Impact & Dev. Initiative | Empowering Children</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-accent: #D39210;
+            --background: #020200;
+            --white: #FFFFFF;
+            --soft-gray: #B7B7AB;
+            --deep-red: #C22B2B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(2, 2, 0, 0.9);
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+    height: 50px;
+    width: auto;
+    padding-right: 5px;
+}
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .logo-text span {
+            color: var(--primary-accent);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-accent);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(2, 2, 0, 0.7), rgba(2, 2, 0, 0.7)), url('images/herosection.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--soft-gray);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-accent);
+            color: var(--white);
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #b57d0e;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(211, 146, 16, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--primary-accent);
+            margin-left: 15px;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(211, 146, 16, 0.1);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-accent);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--soft-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--soft-gray);
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Programs Section */
+        .programs {
+            background-color: rgba(183, 183, 171, 0.05);
+        }
+
+        .program-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .program-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .program-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .program-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .program-card:hover .program-image img {
+            transform: scale(1.1);
+        }
+
+        .program-content {
+            padding: 25px;
+        }
+
+        .program-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(211, 146, 16, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .program-icon i {
+            font-size: 1.5rem;
+            color: var(--primary-accent);
+        }
+
+        .program-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .program-content p {
+            color: var(--soft-gray);
+            margin-bottom: 20px;
+        }
+
+        /* Impact Section */
+        .impact-stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            flex: 1;
+            min-width: 200px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-accent);
+            margin-bottom: 10px;
+        }
+
+        .stat-text {
+            font-size: 1.1rem;
+            color: var(--soft-gray);
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background-color: rgba(183, 183, 171, 0.05);
+        }
+
+        .gallery-section {
+            padding: 80px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #020200;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #D39210;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .filter-tab {
+            padding: 10px 20px;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            color: #666;
+        }
+
+        .filter-tab:hover {
+            background: #f0f0f0;
+        }
+
+        .filter-tab.active {
+            background: #D39210;
+            color: white;
+            border-color: #D39210;
+        }
+
+        .gallery-container {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .gallery-scroll {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 20px;
+            padding: 10px 0;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+        }
+
+        .gallery-scroll::-webkit-scrollbar {
+            display: none; /* Chrome, Safari and Opera */
+        }
+
+        .gallery-item {
+            flex: 0 0 auto;
+            width: 300px;
+            height: 350px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+        }
+
+        .caption-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 20px;
+            transform: translateY(10px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover .caption-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .caption-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .caption-date {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .scroll-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .scroll-arrow {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+            color: #020200;
+        }
+
+        .scroll-arrow:hover {
+            background: #D39210;
+            color: white;
+            border-color: #D39210;
+        }
+
+        .scroll-dots {
+            display: flex;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: #D39210;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .gallery-item {
+                width: 280px;
+                height: 330px;
+            }
+            
+            .filter-tabs {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-section {
+                padding: 60px 15px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .gallery-item {
+                width: 260px;
+                height: 300px;
+            }
+        }
+
+        /* CTA Section */
+        .cta {
+            text-align: center;
+            background: linear-gradient(rgba(2, 2, 0, 0.8), rgba(2, 2, 0, 0.8)), url('images/cta.jpg') no-repeat center center/cover;
+            padding: 100px 0;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: var(--soft-gray);
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary-accent);
+        }
+
+        .footer-column p {
+            color: var(--soft-gray);
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-accent);
+            transform: translateY(-5px);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: var(--soft-gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-accent);
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            color: var(--soft-gray);
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--primary-accent);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--soft-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background-color: rgba(2, 2, 0, 0.95);
+                width: 80%;
+                height: calc(100vh - 70px);
+                transition: right 0.3s;
+                padding-top: 50px;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu li {
+                margin: 0 0 30px 0;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 10px 25px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .cta h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <div class="logoo">
+                    <img src="images/logo.jpg" alt="CIDI Logo">
+                </div>
+                <div class="logo-text">CID<span>I</span></div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Programs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Children Impact and Development Initiative</h1>
+            <p>At Children Impact & Dev. Initiative, we're dedicated to transforming lives through education, healthcare, and empowerment programs for children in underserved communities.</p>
+            <div>
+                <a href="#" class="btn">Get Involved</a>
+                <a href="#" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About CIDI</h2>
+                <p>Learn about our mission, vision, and the impact we're making in children's lives</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Transforming Lives Through Education & Empowerment</h3>
+                    <p>Children Impact and Development Initiative (CIDI) is a non-governmental, non-profit organization that empowers children through welfare and development support, advocating for their rights and opportunities to thrive.</p>
+                    <p>Founded in 2010, we've reached over 5,000 children, providing them with the tools and opportunities they need to break the cycle of poverty and build a better future.</p>
+                    <a href="#" class="btn">Read Our Story</a>
+                </div>
+                <div class="about-image">
+                    <img src="images/v.jpg" alt="CIDI Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Programs</h2>
+                <p>We offer comprehensive programs designed to address the diverse needs of children</p>
+            </div>
+            <div class="program-cards">
+                <div class="program-card">
+                    <div class="program-image">
+                        <img src="images/education.jpg" alt="Education Program">
+                    </div>
+                    <div class="program-content">
+                        <div class="program-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Quality Education</h3>
+                        <p>We provide access to quality education through school sponsorships, learning materials, and teacher training programs.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-image">
+                        <img src="images/healthcare.jpg" alt="Healthcare Program">
+                    </div>
+                    <div class="program-content">
+                        <div class="program-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Healthcare Access</h3>
+                        <p>Our healthcare initiatives provide medical check-ups, vaccinations, and nutrition programs to ensure children's wellbeing.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="program-image">
+                        <img src="images/community dev.jpg" alt="Community Development">
+                    </div>
+                    <div class="program-content">
+                        <div class="program-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Community Development</h3>
+                        <p>We equip young people with life skills, vocational training, and leadership opportunities to become change-makers.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Impact</h2>
+                <p>Together, we're making a tangible difference in the lives of children and communities</p>
+            </div>
+            <div class="impact-stats">
+                <div class="stat-item">
+                    <div class="stat-number">5,000+</div>
+                    <div class="stat-text">Children Reached</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-text">Communities Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-text">volunteers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-text">Program Success Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- gallery Section -->
+
+    <section class="gallery-section">
+        <h2 class="section-title">Moments of Impact</h2>
+        <p class="section-subtitle">Capturing the heart of our mission through the smiles we create and the lives we touch</p>
+        
+    
+        
+        <div class="gallery-container">
+            <div class="gallery-scroll" id="galleryScroll">
+
+                <div class="gallery-item" data-category="education">
+                    <img src="images/gallery/1.JPG" alt="School Outreach" class="gallery-img">
+                    <div class="caption-overlay">
+                        <div class="caption-title">School Outreach Program</div>
+                        <div class="caption-date">Lagos, 2023</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="education">
+                    <img src="images/gallery/2.jpg" alt="Learning Materials" class="gallery-img">
+                    <div class="caption-overlay">
+                        <div class="caption-title">Learning Materials Distribution</div>
+                        <div class="caption-date">Abuja, 2023</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="health">
+                    <img src="images/gallery/3.jpg" alt="Health Camp" class="gallery-img">
+                    <div class="caption-overlay">
+                        <div class="caption-title">Community Health Camp</div>
+                        <div class="caption-date">Kano, 2023</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="health">
+                    <img src="images/gallery/4.JPG" alt="Vaccination Drive" class="gallery-img">
+                    <div class="caption-overlay">
+                        <div class="caption-title">Vaccination Drive</div>
+                        <div class="caption-date">Port Harcourt, 2023</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="empowerment">
+                    <img src="images/gallery/5.jpg" alt="Youth Training" class="gallery-img">
+                    <div class="caption-overlay">
+                        <div class="caption-title">Youth Skills Training</div>
+                        <div class="caption-date">Ibadan, 2023</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="empowerment">
+                    <img src="images/gallery/6.jpg" alt="Women Empowerment" class="gallery-img">
+                    <div class="caption-overlay">
+                        <div class="caption-title">Women Empowerment Workshop</div>
+                        <div class="caption-date">Enugu, 2023</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="events">
+                    <img src="images/gallery/7.jpg" alt="Fundraising Event" class="gallery-img">
+                    <div class="caption-overlay">
+                        <div class="caption-title">Annual Fundraising Gala</div>
+                        <div class="caption-date">Lagos, 2023</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="events">
+                    <img src="images/gallery/8.jpg" alt="Volunteer Appreciation" class="gallery-img">
+                    <div class="caption-overlay">
+                        <div class="caption-title">Volunteer Appreciation Day</div>
+                        <div class="caption-date">Abuja, 2023</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-controls">
+            <div class="scroll-arrow" id="scrollLeft">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            
+            <div class="scroll-dots" id="scrollDots">
+                <!-- Dots will be generated by JavaScript -->
+            </div>
+            
+            <div class="scroll-arrow" id="scrollRight">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Join Us in Making a Difference</h2>
+            <p>Your support can transform a child's life. Whether through donations, volunteering, or spreading awareness, every action counts.</p>
+            <a href="#" class="btn">Donate Now</a>
+            <a href="#" class="btn btn-secondary">Volunteer</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About CIDI</h3>
+                    <p>Children Impact & Dev. Initiative is dedicated to empowering children through education, healthcare, and community development programs.</p>
+                    <p>Registration No: CAC/RT/49325</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Programs</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Programs</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Quality Education</a></li>
+                        <li><a href="#">Healthcare Access</a></li>
+                        <li><a href="#">Community Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> D22A, Union Homes Estate, Kuje, Abuja, Nigeria </li>
+                        <li><i class="fas fa-phone"></i> +234 803 7231 244</li>
+                        <li><i class="fas fa-envelope"></i> childrenimpact@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 5:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Children Impact & Dev. Initiative. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+
+        });
+
+          document.addEventListener('DOMContentLoaded', function() {
+            const galleryScroll = document.getElementById('galleryScroll');
+            const scrollLeft = document.getElementById('scrollLeft');
+            const scrollRight = document.getElementById('scrollRight');
+            const scrollDots = document.getElementById('scrollDots');
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            // Calculate scroll amount (width of one item + gap)
+            const scrollAmount = 320; // 300px width + 20px gap
+            
+            // Create dots based on number of gallery items
+            function createDots() {
+                scrollDots.innerHTML = '';
+                const itemCount = galleryItems.length;
+                
+                for (let i = 0; i < itemCount; i++) {
+                    const dot = document.createElement('div');
+                    dot.classList.add('dot');
+                    if (i === 0) dot.classList.add('active');
+                    
+                    dot.addEventListener('click', function() {
+                        scrollToIndex(i);
+                        updateActiveDot(i);
+                    });
+                    
+                    scrollDots.appendChild(dot);
+                }
+            }
+            
+            // Scroll to specific index
+            function scrollToIndex(index) {
+                galleryScroll.scrollTo({
+                    left: index * scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+            
+            // Update active dot
+            function updateActiveDot(index) {
+                const dots = document.querySelectorAll('.dot');
+                dots.forEach(dot => dot.classList.remove('active'));
+                if (dots[index]) dots[index].classList.add('active');
+            }
+            
+         
+            // Scroll events
+            scrollLeft.addEventListener('click', function() {
+                galleryScroll.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+            
+            scrollRight.addEventListener('click', function() {
+                galleryScroll.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Update active dot on scroll
+            galleryScroll.addEventListener('scroll', function() {
+                const scrollPosition = galleryScroll.scrollLeft;
+                const activeIndex = Math.round(scrollPosition / scrollAmount);
+                updateActiveDot(activeIndex);
+            });
+            
+            // Touch/swipe functionality
+            let startX;
+            let scrollLeftPosition;
+            
+            galleryScroll.addEventListener('touchstart', function(e) {
+                startX = e.touches[0].pageX;
+                scrollLeftPosition = galleryScroll.scrollLeft;
+            });
+            
+            galleryScroll.addEventListener('touchmove', function(e) {
+                e.preventDefault();
+                const x = e.touches[0].pageX;
+                const walk = (x - startX) * 2; // Scroll-fast factor
+                galleryScroll.scrollLeft = scrollLeftPosition - walk;
+            });
+            
+            // Initialize dots
+            createDots();
+        });
+    </script>
+</body>
+</html>
