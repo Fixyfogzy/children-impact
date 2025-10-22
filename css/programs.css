@@ -153,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero {
     height: 60vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), 
-                url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80');
+                url('images/');
     background-size: cover;
     background-position: center;
     display: flex;
