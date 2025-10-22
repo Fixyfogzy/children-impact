@@ -21,17 +21,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Volunteers Data
     const volunteersData = [
-        { id: 1, name: "Aisha", role: "Education Tutor", img: "images/volunteers/v1.jpg" },
-        { id: 2, name: "Chinedu", role: "Health Worker", img: "images/volunteers/v2.jpg" },
-        { id: 3, name: "Grace", role: "Event Coordinator", img: "images/volunteers/v3.jpg" },
-        { id: 4, name: "Emeka", role: "Youth Mentor", img: "images/volunteers/v4.jpg" },
-        { id: 5, name: "Bola", role: "Fundraiser", img: "images/volunteers/v5.jpg" },
-        { id: 6, name: "Ngozi", role: "Community Liaison", img: "images/volunteers/v6.jpg" },
-        { id: 7, name: "Tunde", role: "Sports Coach", img: "images/volunteers/v7.jpg" },
-        { id: 8, name: "Funke", role: "Arts Teacher", img: "images/volunteers/v8.jpg" },
-        { id: 9, name: "Samuel", role: "IT Support", img: "images/volunteers/v9.jpg" },
-        { id: 10, name: "Chioma", role: "Nutritionist", img: "images/volunteers/v10.jpg" },
-        { id: 11, name: "Fatima", role: "Counselor", img: "images/volunteers/v11.jpg" },
+        { id: 1, name: "Vivian O. Akanbi", role: "Civil Servant", img: "images/volunteers/v1.jpg" },
+        { id: 2, name: "Chinedu", role: "Sport psychologist", img: "images/volunteers/v2.jpg" },
+        { id: 3, name: "Pastor Funmilayo Abayomi", role: "Civil Servant", img: "images/volunteers/v3.jpg" },
+        { id: 4, name: "Nurse Joy Adeola Dikko", role: "Civil Servant", img: "images/volunteers/v4.jpg" },
+        { id: 5, name: "Oluleye Toluwani Samuel", role: "Fundraiser", img: "images/volunteers/v5.jpg" },
+        { id: 6, name: "Ahmed Faith", role: "Civil Servant", img: "images/volunteers/v6.jpg" },
+        { id: 7, name: "Tunde", role: "Teacher", img: "images/volunteers/v7.jpg" },
+        { id: 8, name: "Olorunfemi Osekafore Damilola", role: "Arts Teacher", img: "images/volunteers/v8.jpg" },
+        { id: 9, name: "Christian Emmanuel", role: "Teacher", img: "images/volunteers/v9.jpg" },
+        { id: 10, name: "Mrs. Funmi Aribilola", role: "Nutritionist", img: "images/volunteers/v10.jpg" },
+        { id: 11, name: "Oluwatobi Ayeni", role: "Beauty and Fashion Enhancement Specialistr", img: "images/volunteers/v11.jpg" },
         { id: 12, name: "Adebayo", role: "Program Assistant", img: "images/volunteers/v12.jpg" }
     ];
 

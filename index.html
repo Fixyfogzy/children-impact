@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="shortcut icon" href="images/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/about.css">
     <style>
         :root {
             --primary-accent: #D39210;
@@ -679,31 +680,41 @@
         }
 
         @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-            
-            .nav-menu {
-                position: fixed;
-                top: 70px;
-                right: -100%;
-                flex-direction: column;
-                background-color: white;
-                width: 80%;
-                height: calc(100vh - 70px);
-                transition: right 0.3s;
-                padding-top: 50px;
-                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-            }
-            
-            .nav-menu.active {
-                right: 0;
-            }
-            
-            .nav-menu li {
-                margin: 0 0 30px 0;
-                text-align: center;
-            }
+
+
+              .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background: var(--bg-white);
+        width: 100%;
+        text-align: center;
+        transition: var(--transition);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        padding: 2rem 0;
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 1rem;
+        width: 100%;
+    }
+     
             
             .hero h1 {
                 font-size: 2.2rem;
@@ -721,8 +732,11 @@
                 padding: 10px 25px;
                 font-size: 0.9rem;
             }
+
         }
 
+
+        
         @media (max-width: 576px) {
             .hero h1 {
                 font-size: 1.8rem;
@@ -736,6 +750,8 @@
                 font-size: 2rem;
             }
         }
+
+        
 
         
         .partners-section {
@@ -1039,26 +1055,35 @@
     </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header>
-        <div class="container nav-container">
+     <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
             <div class="logo">
-                <div class="logoo">
-                    <img src="images/logo.jpg" alt="CIDI Logo">
-                </div>
-                <div class="logo-text">CID<span>I</span></div>
+                <img src="images/logo.jpg" alt="CIDI Logo">
             </div>
-            <div class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Programs</a></li>
-                <li><a href="#">Contact</a></li>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-lin">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="programs.html" class="nav-link">Programs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
             </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -1067,7 +1092,6 @@
             <p>At Children Impact & Dev. Initiative, we're dedicated to transforming lives through education, healthcare, and empowerment programs for children in underserved communities.</p>
             <div>
                 <a href="#" class="btn">Get Involved</a>
-                <a href="about.html" class="btn btn-secondary">Learn More</a>
             </div>
         </div>
     </section>
@@ -1108,7 +1132,7 @@
                         </div>
                         <h3>Quality Education</h3>
                         <p>We provide access to quality education through school sponsorships, learning materials, and teacher training programs.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <a href="programs.html" class="btn">Learn More</a>
                     </div>
                 </div>
                 <div class="program-card">
@@ -1121,7 +1145,7 @@
                         </div>
                         <h3>Healthcare Access</h3>
                         <p>Our healthcare initiatives provide medical check-ups, vaccinations, and nutrition programs to ensure children's wellbeing.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <a href="programs.html" class="btn">Learn More</a>
                     </div>
                 </div>
                 <div class="program-card">
@@ -1134,7 +1158,7 @@
                         </div>
                         <h3>Community Development</h3>
                         <p>We equip young people with life skills, vocational training, and leadership opportunities to become change-makers.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <a href="programs.html" class="btn">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -1224,16 +1248,16 @@
                     <ul class="footer-links">
                         <li><a href="#">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="#">Our Programs</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="programs.html">Our Programs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Programs</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Quality Education</a></li>
-                        <li><a href="#">Healthcare Access</a></li>
-                        <li><a href="#">Community Development</a></li>
+                        <li><a href="programs.html">Quality Education</a></li>
+                        <li><a href="programs.html">Healthcare Access</a></li>
+                        <li><a href="programs.html">Community Development</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -1251,27 +1275,11 @@
             </div>
         </div>
     </footer>
+   <script src="js/about.js"></script>
 
     <script>
         // Mobile Navigation Toggle
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('nav-menu');
-
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            hamburger.innerHTML = navMenu.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-
-        });
+   
  document.addEventListener('DOMContentLoaded', function() {
             const galleryScroll = document.getElementById('galleryScroll');
             const scrollLeft = document.getElementById('scrollLeft');
