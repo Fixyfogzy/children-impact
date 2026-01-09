@@ -117,17 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // Minimal Volunteer Form JavaScript for 3rd Party Form
 document.addEventListener('DOMContentLoaded', function() {
     const volunteerForm = document.getElementById('volunteerForm');
