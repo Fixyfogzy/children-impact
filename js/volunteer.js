@@ -123,6 +123,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const successModal = document.getElementById('successModal');
     
     // Only add interactivity - validation will be handled by 3rd party service
+
+    
     
     // Make checkboxes more interactive
     const checkboxes = document.querySelectorAll('.checkbox-item');
