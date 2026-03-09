@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://childrenimpact.org.ng/sitemap.xml
